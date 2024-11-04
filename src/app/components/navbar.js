@@ -12,13 +12,13 @@ export default function Navbar(){
                     src={Logo}
                     alt="mkoc logo"
                     width={100}
-                    height={30}
+                    height={25}
                     quality={100}
                     placeholder="blur" // Placeholder option
                     blurDataURL="/path/to/placeholder.jpg" // 
                 />
-                <Link href="/pages/index">Home</Link>
-                <Link href="/pages/about">About us</Link>
+                <Link className="bar-item" href="/">Home</Link>
+                <Link className="bar-item" href="/page">About us</Link>
                 <Link
                     rel="icon"
                     href="./PersonLogo.png"

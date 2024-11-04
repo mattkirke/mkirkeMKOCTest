@@ -7,9 +7,9 @@ import GetAdventureData from "./components/getAdventureData";
 export default function HomePage() {
 	return (
 		<div>
-            <Navbar />
-            <GetAdventureData /> 
-        	  <GetCruiseData /> 
+      <Navbar />
+      <GetAdventureData /> 
+      <GetCruiseData /> 
 		</div>
 	);
 }
