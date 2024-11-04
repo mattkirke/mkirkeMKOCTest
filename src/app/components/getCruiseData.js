@@ -38,24 +38,24 @@ export default function GetCruiseData() {
     const sailDate = cruise?.sailDate; 
     const formattedDate = sailDate ? sailDate.slice(0, 10) : "Date not available"; // Fallback
     return (
-        <div className="adventure-main">
-            <h5 className="adventure-title">My Cruise</h5>
-            <div className="adventure-list" ref={scrollRef}>
+        <div className="main">
+            <h5 className="title">My Cruise</h5>
+            <div className="list" ref={scrollRef}>
               {/* Map through data to show each item  */}
                 {cruise.map((cruise, index) => (
-                    <div key={index} className="adventure-item">
+                    <div key={index} className="item">
                         {cruise.shipImage && cruise.shipImage !== "https:undefined" ? (
                             <img
                                 src={cruise.shipImage}
                                 alt={cruise.shipImage }
-                                className="adventure-image"
+                                className="image"
                             />
                         ) : (
-                            <div className="adventure-empty-placeholder">
+                            <div className="empty-placeholder">
                                 
                             </div>
                         )}
-                        <h6 className="adventure-title">
+                        <h6 className="title">
                             {cruise.nights} Night {cruise.name ? cruise.name : ""}
                         </h6>
                             <p>Travelling on: {cruise.shipName}</p>
@@ -63,7 +63,7 @@ export default function GetCruiseData() {
                             <p>{formattedDate}</p> 
                             {/* <img src={cruise.iconOverlay}
                                 alt={cruise.iconOverlay }
-                                className="adventure-image"
+                                className="image"
                             /><div>{cruise.iconOverlay && (
                                         <img
                                             src={cruise.iconOverlay}
@@ -72,8 +72,8 @@ export default function GetCruiseData() {
                                                 position: 'absolute',
                                                 top: 0,
                                                 right: 0,
-                                                width: '50px', // Adjust size as needed
-                                                height: '50px', // Adjust size as needed
+                                                width: '50px',
+                                                height: '50px',
                                                 zIndex: 1,
                                             }} />)}
                                             </div> */}

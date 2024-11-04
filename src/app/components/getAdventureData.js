@@ -34,24 +34,23 @@ export default function GetAdventureData() {
     };
 
     return (
-        <div className="adventure-main">
-            <h5 className="adventure-title">My Adventures</h5>
-            <div className="adventure-list" ref={scrollRef}>
+        <div className="main">
+            <h5 className="title">My Adventures</h5>
+            <div className="list" ref={scrollRef}>
               {/* Map through data to show each item  */}
                 {adventures.map((adventure, index) => (
-                    <div key={index} className="adventure-item">
+                    <div key={index} className="item">
                         {adventure.image && adventure.image !== "https:undefined" ? (
                             <img
                                 src={adventure.image}
                                 alt={adventure.name }
-                                className="adventure-image"
+                                className="image"
                             />
                         ) : (
-                            <div className="adventure-empty-placeholder">
-                                No image available
+                            <div className="empty-placeholder">
                             </div>
                         )}
-                        <h6 className="adventure-title">
+                        <h6 className="title">
                             {adventure.name ? adventure.name : ""}
                         </h6>
                     </div>

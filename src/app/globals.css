@@ -2,47 +2,48 @@
 body {
     font-family: 'Outfit', sans-serif;
 }
+
 .NavBar {
     background-color:#0057a2;
     padding: 10px;
     display: flex;
     align-items: center;
     gap: 10px;
-    color: white; /* Optional: Makes link text white */
+    color: white; 
 }
 
-.adventure-main {
+.main{
     text-align: center;
 }
 
-.adventure-list {
+.list {
     display: flex;
-    overflow-x: auto; /* Allow horizontal scrolling */
-    scroll-behavior: smooth; /* Smooth scrolling */
-    padding: 10px; /* Optional padding */
-    white-space: nowrap; /* Prevent items from wrapping */
+    overflow-x: auto; 
+    scroll-behavior: smooth; 
+    padding: 10px; 
+    white-space: nowrap;
 }
 
 /* Margin between images  */
-.adventure-item {
+.item {
     display: inline-block; 
     margin: 0 30px; 
     max-width: 200px;
 }
 
-.adventure-image {
+.image {
     max-height: 150px;
     width: 250px;
     border-radius: 5px;
 }
 
-.adventure-empty-placeholder {
+.empty-placeholder {
     width: -50px;
     margin-left: -500px;
     background-color: #f0f0f0;
 }
 
-.adventure-title {
+.title {
     margin-top: 5px;
 }
 
