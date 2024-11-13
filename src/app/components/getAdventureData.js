@@ -19,46 +19,28 @@ export default function GetAdventureData() {
         fetchAdventureData();
     }, []); // Empty dependency array means this effect runs once on mount
 
-    // Function to scroll to the right
-    const scrollRight = () => {
-        if (scrollRef.current) {
-            scrollRef.current.scrollBy({ left: 220, behavior: 'smooth' });
-        }
-    };
-
-    // Function to scroll to the left
-    const scrollLeft = () => {
-        if (scrollRef.current) {
-            scrollRef.current.scrollBy({ left: -220, behavior: 'smooth' });
-        }
-    };
-
     return (
-        <div className="main">
-            <h5 className="title">My Adventures</h5>
-            <div className="list" ref={scrollRef}>
+        <div className="mainRow">
+            <p className="header">My Adventures</p>
+            <div className="itemRowAdventure" ref={scrollRef}>
               {/* Map through data to show each item  */}
-                {adventures.map((adventure, index) => (
-                    <div key={index} className="item">
+              {adventures.slice(0,6).map((adventure, index) => (
+                    <div key={index} className="cardItemAdventure">
                         {adventure.image && adventure.image !== "https:undefined" ? (
                             <img
                                 src={adventure.image}
                                 alt={adventure.name }
-                                className="image"
+                                className="imageAdventures"
                             />
                         ) : (
                             <div className="empty-placeholder">
                             </div>
                         )}
-                        <h6 className="title">
+                        <h6 className="adventureCardTitle">
                             {adventure.name ? adventure.name : ""}
                         </h6>
                     </div>
                 ))}
-            </div>
-            <div>
-                <button className="scroll" onClick={scrollLeft}>Left</button>
-                <button className="scroll" onClick={scrollRight}>Right</button>
             </div>
         </div>
     );

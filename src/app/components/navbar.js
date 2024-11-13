@@ -8,6 +8,7 @@ export default function Navbar(){
     return (
         <div> 
             <nav className="NavBar">
+                <div className="navStyle">
                 <Image 
                     src={Logo}
                     alt="mkoc logo"
@@ -25,6 +26,7 @@ export default function Navbar(){
                     type="image/<generated>"
                     sizes="<generated>"
                 />
+                </div>
             </nav>
         </div>
     )

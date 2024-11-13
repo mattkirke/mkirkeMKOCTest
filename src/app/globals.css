@@ -1,62 +1,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 body {
-    font-family: 'Outfit', sans-serif;
+  font-family: 'Outfit', sans-serif;
 }
 
 .NavBar {
-    background-color:#0057a2;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: white; 
+  background-color:#0057a2;
+  margin:0;
+  padding:0;
+}
+.navStyle{
+ margin-left: 150px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white; 
 }
 
-.main{
-    text-align: center;
+.ListGrid {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 1fr, 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 40px;
+  justify-content: center;
+}
+/* Adventure Styling */
+.adventureRow{
+  grid-row: 1;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center ;
+  
+}
+.cardItemAdventure {
+  display: inline-block; 
+  margin: 0 5px; 
+  border: 2px solid #bbb;
+  border-radius: 8px;
+  box-shadow: 0.5px grey; 
+}
+.itemRowAdventure {
+  display: flex;
+  white-space: nowrap;
+  text-align: center;
+  gap: 40px;
+}
+.imageAdventures {
+  height: 140px;
+  width: 210px;
+  border-radius: 5px;
+}
+.adventureCardTitle {
+  margin-top: 3px;
+  margin-left: 5px;
+  justify-content: left;
 }
 
-.list {
-    display: flex;
-    overflow-x: auto; 
-    scroll-behavior: smooth; 
-    padding: 10px; 
-    white-space: nowrap;
+/* Cruise Styling */
+.cruiseRow{
+  grid-row: 2;
+  margin-left: 60px;
+  justify-items: center;
+  align-items: center;
+}
+.cardItemCruise {
+  width: 300px;
+  justify-content: space-between;
+  border: 2px solid #bbb;
+  box-shadow: 0.5px grey;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px
+}
+.imageCruise {
+  height: 250px;
+  width: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+  
+}
+.itemRowCruise {
+  display: flex; 
+  white-space: nowrap;
+  gap: 10px;
 }
 
-/* Margin between images  */
-.item {
-    display: inline-block; 
-    margin: 0 30px; 
-    max-width: 200px;
+.cruiseInfo {
+  display: flex;
+  flex-direction: column; 
+  gap: 5px; 
 }
 
-.image {
-    max-height: 150px;
-    width: 250px;
-    border-radius: 5px;
+.cruiseInfo p {
+  margin: 0; 
+  font-size: 14px; /* Adjust font size if needed */
+  margin-top: 3px;
+  margin-left: 5px;
+  justify-content: left;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+.header{
+  margin-left: 8px;
+  font-weight: 600;
 }
 
-.empty-placeholder {
-    width: -50px;
-    margin-left: -500px;
-    background-color: #f0f0f0;
+.cruiseCardTitle {
+  margin-top: 3px;
+  margin-left: 5px;
+  justify-content: left;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
-.title {
-    margin-top: 5px;
+.cruiseIcon{
+  display: flex;
+  align-items: center; /* Align the text and icon vertically */
+  gap: 160px;
 }
-
-.scroll {
-    cursor: pointer;
-    padding: 10px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    margin: 10px;
-}
-
 .bar-item {
   color: white;
   text-decoration: none;
