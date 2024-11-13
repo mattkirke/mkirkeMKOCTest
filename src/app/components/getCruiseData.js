@@ -21,6 +21,7 @@ export default function GetCruiseData() {
 
         fetchCruiseData();
     }, []); //runs once
+    
     function getDaySuffix(day) {
         if (day === 1 || day === 21 || day === 31) {
             return 'st';
@@ -68,9 +69,10 @@ export default function GetCruiseData() {
                             {cruise.iconOverlay && cruise.iconOverlay !== "https:undefined" ? (
                             <div
                                 style={{
-                                    backgroundColor: cruise.iconBackgroundColor, // Set background color dynamically
-                                    padding: '5px', // Optional: Adjust the size of the background area
-                                    borderRadius: '5px', // Optional: Make it circular if you want
+                                    //dynamic background
+                                    backgroundColor: cruise.iconBackgroundColor, 
+                                    padding: '5px', 
+                                    borderRadius: '5px',
                                     width: '30px',
                                     height: '30px',
                                 }}

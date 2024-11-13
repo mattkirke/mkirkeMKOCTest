@@ -94,7 +94,7 @@ body {
 
 .cruiseInfo p {
   margin: 0; 
-  font-size: 14px; /* Adjust font size if needed */
+  font-size: 14px; 
   margin-top: 3px;
   margin-left: 5px;
   justify-content: left;
@@ -116,7 +116,7 @@ body {
 
 .cruiseIcon{
   display: flex;
-  align-items: center; /* Align the text and icon vertically */
+  align-items: center;
   gap: 110px;
 }
 .bar-item {
